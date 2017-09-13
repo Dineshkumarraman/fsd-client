@@ -4,7 +4,7 @@ var validateLength = require('../src/validateFolder/validate');
 
 describe('Length Validation', function() {
   it('input field length should be less than or equal to 10', function() {
-    var initialVal = new validateLength("samplestri");
+    var initialVal = new validateLength("samplestr");
     expect(initialVal.checkLength()).to.be.at.most(10);
   });
 });
