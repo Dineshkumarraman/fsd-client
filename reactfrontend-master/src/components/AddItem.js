@@ -28,7 +28,7 @@ class AddItem extends Component {
           <form onSubmit={this.handleSubmit}>
             <label>
               Add Item:
-              <input type="text" value={this.state.value} onChange={this.handleChange} className="form-control"/>
+              <input type="text" maxLength="10" onInput={() => this.checkLength(this.state.value)} value={this.state.value} onChange={this.handleChange} className="form-control"/>
             </label><br/>
             <input type="submit" value="Submit" className="btn btn-primary"/>
           </form>
